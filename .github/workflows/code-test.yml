@@ -1,4 +1,4 @@
-name: Run lint and code test
+name: Run code test
 on: [workflow_dispatch, push]
 jobs:
   Code-Test:
