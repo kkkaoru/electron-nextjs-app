@@ -24,7 +24,8 @@
     "tsc:electron": "tsc --noEmit --project  ./electron-src/tsconfig.json",
     "tsc:next": "tsc --noEmit --project ./renderer/tsconfig.json",
     "tsc-all": "npm-run-all -p tsc:*",
-    "test": "npm run tsc-all"
+    "test": "npm run tsc-all",
+    "prepare": "husky install"
   },
   "dependencies": {
     "electron": "^10.4.4",
@@ -47,6 +48,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
+    "husky": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.0",
