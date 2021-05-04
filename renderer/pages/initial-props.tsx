@@ -6,8 +6,7 @@ import { User } from '../interfaces'
 import { findAll } from '../utils/sample-api'
 
 type Props = {
-  items: User[]
-  pathname: string
+  items: User[],
 }
 
 const WithInitialProps = ({ items }: Props) => {
