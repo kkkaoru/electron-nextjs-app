@@ -1,6 +1,6 @@
 // Native
 import { join } from 'path';
-import { format } from 'url';
+import { pathToFileURL } from 'url';
 
 // Packages
 import { BrowserWindow, app, ipcMain, IpcMainEvent } from 'electron';
@@ -22,11 +22,7 @@ app.on('ready', async () => {
 
   const url = isDev
     ? 'http://localhost:8000/'
-    : format({
-        pathname: join(__dirname, '../renderer/out/index.html'),
-        protocol: 'file:',
-        slashes: true,
-      });
+    : pathToFileURL(join(__dirname, '../renderer/out/index.html')).href
 
   mainWindow.loadURL(url);
 });
